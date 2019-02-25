@@ -31,6 +31,9 @@ export class BookDialogComponent implements OnInit {
 
   public submitDialog(): void {
     const bookData: Book = this.bookForm.value;
+    if (this.data && this.data.book) {
+      bookData.isFaforite = this.data.book.isFaforite;
+    }
     this.isEdit ? this.bookService.updateBook(bookData, this.editBookId) : this.bookService.addBook(bookData);
     this.dialogRef.close();
   }

@@ -38,9 +38,4 @@ export class BooksHttpService extends BaseHttpService {
       this.store.dispatch(new UpdateBook(item));
     });
   }
-
-  // public searchBook(word: string) {
-  //   this.store.dispatch(new SearchBook(word));  // FOR IMPLEMENT SEARCH
-  // }
-
 }

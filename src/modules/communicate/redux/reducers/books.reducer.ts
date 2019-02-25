@@ -30,13 +30,6 @@ export function BooksReducer(state = initialState, action: BooksAction) {
       };
     }
 
-    // case BOOK_ACTION.SEARCH_BOOKS: {
-    //   return {
-    //     ...state,
-    //     books: [...state.books.filter((book: Book) => book.name.indexOf(action.payload)), action.payload]  // FOR FUTURE SEARCH
-    //   };
-    // }
-
     default:
       return state;
   }

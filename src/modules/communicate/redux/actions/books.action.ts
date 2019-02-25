@@ -5,7 +5,6 @@ export namespace BOOK_ACTION {
   export const ADD_BOOK = 'ADD_BOOK';
   export const UPDATE_BOOK = 'UPDATE_BOOK';
   export const LOAD_BOOKS = 'LOAD_BOOKS';
-  // export const SEARCH_BOOKS = 'SEARCH_BOOKS'; // for future search
 }
 
 export type BooksAction = AddBook | UpdateBook | LoadBooks;
@@ -30,13 +29,4 @@ export class LoadBooks implements Action {
   constructor(public payload: Books[]) {
   }
 }
-
-// export class SearchBook implements Action {  // FOR IMPLEMENT SORT BY NAME
-//   readonly type = BOOK_ACTION.SEARCH_BOOKS;
-//
-//   constructor(public payload: string) {
-//   }
-// }
-
-
 

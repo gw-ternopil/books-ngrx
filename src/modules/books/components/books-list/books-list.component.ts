@@ -8,7 +8,6 @@ import {AppState} from '../../../communicate/redux/state/app.state';
 import {Observable} from 'rxjs';
 import {BookDialogComponent} from '../book-dialog/book-dialog.component';
 
-
 @Component({
   selector: 'app-books-list',
   templateUrl: './books-list.component.html',
@@ -44,8 +43,8 @@ export class BooksListComponent implements OnInit {
   }
 
   public setFavorite(id: number): void {
-    this.booksState.subscribe(array => {
-      this.selectBook = array.books.find(book => book.id === id);
+    this.booksState.subscribe((array: Books) => {
+      this.selectBook = array.books.find((book: Book) => book.id === id);
     });
     this.selectBook.isFaforite ? this.selectBook.isFaforite = false : this.selectBook.isFaforite = true;
     this.bookService.updateBook(this.selectBook, id);
@@ -55,14 +54,15 @@ export class BooksListComponent implements OnInit {
     this.searchForm = new FormGroup({
       searchParams: new FormControl('')
     });
-    // this.searchForm.controls['searchParams'].valueChanges.pipe(  // IMPLEMENT SORTING BY NAME
-    //   debounceTime(300),
-    //   distinctUntilChanged()).subscribe(word => {
-    //     if (this.searchForm.controls['searchParams'].value) {
-    //       this.bookService.searchBook(word);
-    //     }
-    //   }
-    // );
-  }
 
+    // Search by name
+    //
+    // this.searchForm.controls['searchParams'].valueChanges.pipe(debounceTime(300), distinctUntilChanged())
+    //   .subscribe((key: string) => {
+    //     this.booksState.subscribe((array: Books) => {
+    //       const searchItems: Book[] = array.books.filter((item: Book) => item.name.includes(key));
+    //       console.log(searchItems);
+    //     });
+    //   });
+  }
 }
