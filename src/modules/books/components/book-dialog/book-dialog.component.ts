@@ -29,20 +29,20 @@ export class BookDialogComponent implements OnInit {
     }
   }
 
-  public submitDialog() {
+  public submitDialog(): void {
     const bookData: Book = this.bookForm.value;
     this.isEdit ? this.bookService.updateBook(bookData, this.editBookId) : this.bookService.addBook(bookData);
     this.dialogRef.close();
   }
 
-  private setEditData(book: Book) {
+  private setEditData(book: Book): void {
     this.isEdit = true;
     this.dialogTitle = 'Edit';
     this.editBookId = book.id;
     this.bookForm.patchValue(book);
   }
 
-  private initBookForm() {
+  private initBookForm(): void {
     this.bookForm = new FormGroup({
       name: new FormControl('',
         [Validators.required,

@@ -13,7 +13,7 @@
 </div>
 <div class="book-list-wrapper">
   <div class="book-list" *ngFor="let book of (booksState | async).books">
-    <div class="book-list__item" [ngClass]="{'favorite': book.isFaforite}">
+    <div class="book-list__item">
       <div class="book-list__item--name">
         <span class="title">Book name: </span>
         <span>{{book.name}}</span>

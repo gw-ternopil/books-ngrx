@@ -27,14 +27,14 @@ export class BookItemComponent implements OnInit {
     this.getBookById();
   }
 
-  public getBookById() {
+  public getBookById(): void {
     const observable = combineLatest(this.activatedRoute.params, this.booksState).subscribe(([route, state]) => {
       const ID = Number(route.id);
       this.book = state.books.find((book: Book) => book.id === ID);
     });
   }
 
-  public editBook() {
+  public editBook(): void {
     this.dialog.open(BookDialogComponent, {
       width: '350px',
       data: {

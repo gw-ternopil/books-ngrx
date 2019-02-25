@@ -1,11 +1,12 @@
 {
   "books": [
     {
-      "name": "11/22/631",
-      "author": "Stephen King1",
-      "genre": "Detective, fantastic 1",
-      "pageAmount": 93,
-      "id": 1
+      "name": "wwwwwwwwwwwwww",
+      "author": "wwwwwwwwwwwww",
+      "genre": "wwwwwwwwww",
+      "pageAmount": 500,
+      "id": 1,
+      "isFaforite": true
     },
     {
       "name": "Kobzar",
@@ -53,7 +54,7 @@
       "genre": "Some genre12",
       "pageAmount": 12,
       "id": 7,
-      "isFaforite": true
+      "isFaforite": false
     },
     {
       "name": "11111111111122",
@@ -61,7 +62,7 @@
       "genre": "33333333344",
       "pageAmount": 1111,
       "id": 8,
-      "isFaforite": true
+      "isFaforite": false
     },
     {
       "name": "3123213",
@@ -69,6 +70,52 @@
       "genre": "123321",
       "pageAmount": 12,
       "id": 9,
+      "isFaforite": false
+    },
+    {
+      "name": "у3к11",
+      "author": "1212111",
+      "genre": "121211",
+      "pageAmount": 111,
+      "id": 10,
+      "isFaforite": false
+    },
+    {
+      "name": "123213111",
+      "author": "12121",
+      "genre": "12121",
+      "pageAmount": 111,
+      "id": 11
+    },
+    {
+      "name": "regntr",
+      "author": "IRUEGHER",
+      "genre": "IHERGI",
+      "pageAmount": 12,
+      "id": 12
+    },
+    {
+      "name": "1112",
+      "author": "1212",
+      "genre": "1212",
+      "pageAmount": 12,
+      "id": 13,
+      "isFaforite": false
+    },
+    {
+      "name": "qqqqqqqqqq",
+      "author": "qqqqqqqqq",
+      "genre": "qqqqqqqq",
+      "pageAmount": 11,
+      "id": 14,
+      "isFaforite": false
+    },
+    {
+      "name": "tttttt",
+      "author": "ttttttttt",
+      "genre": "ttttttttt",
+      "pageAmount": 12,
+      "id": 15,
       "isFaforite": true
     }
   ]

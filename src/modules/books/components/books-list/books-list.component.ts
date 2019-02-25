@@ -32,7 +32,7 @@ export class BooksListComponent implements OnInit {
     this.initSearchForm();
   }
 
-  public onLoad() {
+  public onLoad(): void {
     this.bookService.loadBooks();
   }
 
@@ -43,7 +43,7 @@ export class BooksListComponent implements OnInit {
     });
   }
 
-  public setFavorite(id) {
+  public setFavorite(id: number): void {
     this.booksState.subscribe(array => {
       this.selectBook = array.books.find(book => book.id === id);
     });
@@ -51,7 +51,7 @@ export class BooksListComponent implements OnInit {
     this.bookService.updateBook(this.selectBook, id);
   }
 
-  public initSearchForm() {
+  public initSearchForm(): void {
     this.searchForm = new FormGroup({
       searchParams: new FormControl('')
     });

@@ -19,7 +19,7 @@ export class BooksHttpService extends BaseHttpService {
     super(handler);
   }
 
-  public loadBooks() {
+  public loadBooks(): void {
     this.get<Books[]>(this.concatUrl(''))
       .toPromise().then(
       (books: Books[]) => {
@@ -27,14 +27,14 @@ export class BooksHttpService extends BaseHttpService {
       });
   }
 
-  public addBook(book: Book) {
-    this.post(this.concatUrl(''), book).subscribe((item: Book) => {
+  public addBook(book: Book): void {
+    this.post<Book>(this.concatUrl(''), book).subscribe((item: Book) => {
       this.store.dispatch(new AddBook(item));
     });
   }
 
-  public updateBook(book: Book, id: number) {
-    this.put(this.concatUrl(`/${id}`), book).subscribe((item: Book) => {
+  public updateBook(book: Book, id: number): void {
+    this.put<Book>(this.concatUrl(`/${id}`), book).subscribe((item: Book) => {
       this.store.dispatch(new UpdateBook(item));
     });
   }
