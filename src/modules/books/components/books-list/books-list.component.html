@@ -1,0 +1,47 @@
+<div class="books-header">
+  <div class="search" [formGroup]="searchForm">
+    <mat-form-field class="example-full-width">
+      <input matInput
+             formControlName="searchParams"
+             type="text"
+             placeholder="Search">
+    </mat-form-field>
+  </div>
+  <div class="create">
+    <button mat-raised-button (click)="addBook()">Add book</button>
+  </div>
+</div>
+<div class="book-list-wrapper">
+  <div class="book-list" *ngFor="let book of (booksState | async).books">
+    <div class="book-list__item" [ngClass]="{'favorite': book.isFaforite}">
+      <div class="book-list__item--name">
+        <span class="title">Book name: </span>
+        <span>{{book.name}}</span>
+      </div>
+      <div class="book-list__item--author">
+        <span class="title">Book author: </span>
+        <span>{{book.author}}</span>
+      </div>
+      <div class="book-list__item--genre">
+        <span class="title">Genre: </span>
+        <span>{{book.genre}}</span>
+      </div>
+      <div class="book-list__item--pageAmount">
+        <span class="title">Amount of pages: </span>
+        <span>{{book.pageAmount}}</span>
+      </div>
+      <div class="book-list__item--action">
+         <span class="see-more"
+               [routerLink]="['/books-list', book.id]">
+          See more..
+        </span>
+        <button mat-stroked-button color="accent" (click)="setFavorite(book.id)" *ngIf="!book.isFaforite">Favorite
+        </button>
+        <button mat-raised-button color="accent" (click)="setFavorite(book.id)" *ngIf="book.isFaforite">Favorite
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

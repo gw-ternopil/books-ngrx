@@ -1,0 +1,32 @@
+.book-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 15px;
+
+  &__name,
+  &__author,
+  &__genre,
+  &__pageAmount {
+    margin: 5px 0;
+    .title {
+      font-weight: 500;
+    }
+  }
+
+  .button {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    button {
+      width: 150px;
+    }
+  }
+}

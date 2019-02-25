@@ -1,0 +1,24 @@
+<div class="book-wrapper" *ngIf="book">
+  <div class="book">
+    <div class="book__name">
+      <span class="title">Book name: </span>
+      <span class="value">{{book.name}}</span>
+    </div>
+    <div class="book__author">
+      <span class="title">Book author: </span>
+      <span class="value">{{book.author}}</span>
+    </div>
+    <div class="book__genre">
+      <span class="title">Book genre: </span>
+      <span class="value">{{book.genre}}</span>
+    </div>
+    <div class="book__pageAmount">
+      <span class="title">Amount of pages: </span>
+      <span class="value">{{book.pageAmount}}</span>
+    </div>
+    <div class="button">
+      <button mat-raised-button (click)="editBook()">Edit book</button>
+    </div>
+  </div>
+</div>
+

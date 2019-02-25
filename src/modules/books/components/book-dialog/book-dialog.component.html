@@ -1,0 +1,103 @@
+<div class="dialog-wrapper">
+  <form [formGroup]="bookForm" (ngSubmit)="submitDialog()">
+    <div class="dialog-top">
+      <div class="dialog-top__title">
+        <span>{{dialogTitle}} book</span>
+      </div>
+      <div class="dialog-top__close" (click)="dialogRef.close()">
+        <span>x</span>
+      </div>
+    </div>
+    <div class="dialog-content">
+      <div class="dialog-content__inputs">
+        <div class="dialog-content__inputs--field">
+          <mat-form-field class="example-full-width">
+            <input matInput
+                   formControlName="name"
+                   type="text"
+                   placeholder="Book name">
+          </mat-form-field>
+          <div class="notInputRequired"
+               *ngIf="bookForm.controls['name'].invalid && bookForm.controls['name'].touched">
+                  <span [hidden]="!bookForm.controls['name'].errors.minlength">
+                  Book name must include more than 3 symbols!
+                  </span>
+            <span [hidden]="!bookForm.controls['name'].errors.maxlength">
+          Book name can include 50 symbols
+                 </span>
+            <span [hidden]="!bookForm.controls['name'].errors.required">
+                  Please, enter book name
+                  </span>
+          </div>
+        </div>
+        <div class="dialog-content__inputs--field">
+          <mat-form-field class="example-full-width">
+            <input matInput
+                   formControlName="author"
+                   type="text"
+                   placeholder="Book author name">
+          </mat-form-field>
+          <div class="notInputRequired"
+               *ngIf="bookForm.controls['author'].invalid && bookForm.controls['author'].touched">
+                  <span [hidden]="!bookForm.controls['author'].errors.minlength">
+                  Book author name must include more than 3 symbols!
+                 </span>
+            <span [hidden]="!bookForm.controls['author'].errors.maxlength">
+                  Book author name can include 35 symbols
+                  </span>
+            <span [hidden]="!bookForm.controls['author'].errors.required">
+                  Please, enter book author name
+                  </span>
+          </div>
+        </div>
+        <div class="dialog-content__inputs--field">
+          <mat-form-field class="example-full-width">
+            <input matInput
+                   formControlName="genre"
+                   type="text"
+                   placeholder="Book genre">
+          </mat-form-field>
+          <div class="notInputRequired"
+               *ngIf="bookForm.controls['genre'].invalid && bookForm.controls['genre'].touched">
+                  <span [hidden]="!bookForm.controls['genre'].errors.minlength">
+                  Book genre must include more than 3 symbols!
+                 </span>
+            <span [hidden]="!bookForm.controls['genre'].errors.maxlength">
+                  Book genre can include 30 symbols
+                 </span>
+            <span [hidden]="!bookForm.controls['genre'].errors.required">
+                  Please, enter book genre
+                  </span>
+          </div>
+        </div>
+        <div class="dialog-content__inputs--field">
+          <mat-form-field class="example-full-width">
+            <input matInput
+                   formControlName="pageAmount"
+                   type="number"
+                   placeholder="Book page amount">
+          </mat-form-field>
+          <div class="notInputRequired"
+               *ngIf="bookForm.controls['pageAmount'].invalid && bookForm.controls['pageAmount'].touched">
+              <span [hidden]="!bookForm.controls['pageAmount'].errors.min">
+         The minimum number of pages in a book can be from 10 pages
+            </span>
+            <span [hidden]="!bookForm.controls['pageAmount'].errors.max">
+          The maximum number of pages in a book can be no more 5000 pages
+            </span>
+            <span [hidden]="!bookForm.controls['pageAmount'].errors.required">
+          Please, enter amount of pages
+        </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dialog-buttons">
+      <button mat-raised-button
+              color="primary"
+              [disabled]="!bookForm.valid"
+              type="submit"> {{dialogTitle}}
+      </button>
+    </div>
+  </form>
+</div>

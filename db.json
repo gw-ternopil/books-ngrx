@@ -1,0 +1,39 @@
+{
+  "books": [
+    {
+      "name": "11/22/63",
+      "author": "Stephen King",
+      "genre": "Detective, fantastic ",
+      "pageAmount": 930,
+      "id": 1
+    },
+    {
+      "name": "Kobzar",
+      "author": "Taras Shevchencko",
+      "genre": "Poetry",
+      "pageAmount": 1000,
+      "id": 2
+    },
+    {
+      "name": "ll world War",
+      "author": "Agata Kristi",
+      "genre": "Detective",
+      "pageAmount": 345,
+      "id": 3
+    },
+    {
+      "name": "WAR",
+      "author": "Marie Remark",
+      "genre": "Detective",
+      "pageAmount": 755,
+      "id": 4
+    },
+    {
+      "name": "Angular Proffesional",
+      "author": "Nick Smith",
+      "genre": "Technical lecture",
+      "pageAmount": 1100,
+      "id": 5
+    }
+  ]
+}
