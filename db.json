@@ -1,10 +1,10 @@
 {
   "books": [
     {
-      "name": "11/22/63",
-      "author": "Stephen King",
-      "genre": "Detective, fantastic ",
-      "pageAmount": 935,
+      "name": "11/22/631",
+      "author": "Stephen King1",
+      "genre": "Detective, fantastic 1",
+      "pageAmount": 93,
       "id": 1
     },
     {
@@ -32,7 +32,7 @@
       "isFaforite": false
     },
     {
-      "name": "Angular Proffesional",
+      "name": "Angular Proffesional1",
       "author": "Nick Smith",
       "genre": "Technical lecture",
       "pageAmount": 1100,
@@ -45,6 +45,30 @@
       "genre": "Undefined",
       "pageAmount": 1212,
       "id": 6,
+      "isFaforite": false
+    },
+    {
+      "name": "Some Book12",
+      "author": "Some Author12",
+      "genre": "Some genre12",
+      "pageAmount": 12,
+      "id": 7,
+      "isFaforite": true
+    },
+    {
+      "name": "11111111111122",
+      "author": "222222222233",
+      "genre": "33333333344",
+      "pageAmount": 1111,
+      "id": 8,
+      "isFaforite": true
+    },
+    {
+      "name": "3123213",
+      "author": "123123",
+      "genre": "123321",
+      "pageAmount": 12,
+      "id": 9,
       "isFaforite": true
     }
   ]

@@ -24,7 +24,9 @@ export class BookDialogComponent implements OnInit {
     this.dialogTitle = 'Create';
     this.isEdit = false;
     this.initBookForm();
-    this.checkForEdit();
+    if (this.data && this.data.book) {
+      this.setEditData(this.data.book);
+    }
   }
 
   public submitDialog() {
@@ -33,17 +35,10 @@ export class BookDialogComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  private checkForEdit() {
-    const book: Book = this.data.book;
-    if (this.data && book) {
-      this.isEdit = true;
-      this.editBookId = book.id;
-      this.setEditData(book);
-      this.dialogTitle = 'Edit';
-    }
-  }
-
-  private setEditData(book: {}) {
+  private setEditData(book: Book) {
+    this.isEdit = true;
+    this.dialogTitle = 'Edit';
+    this.editBookId = book.id;
     this.bookForm.patchValue(book);
   }
 

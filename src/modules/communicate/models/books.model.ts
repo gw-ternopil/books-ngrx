@@ -4,7 +4,7 @@ export class Book {
     public author: string,
     public pageAmount: number,
     public genre: string,
-    public isFaforite?: boolean = false,
+    public isFaforite?: boolean,
     public id?: number,
   ) {
   }
