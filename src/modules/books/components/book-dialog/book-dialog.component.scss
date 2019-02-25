@@ -16,8 +16,10 @@
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
+
   &__close {
     cursor: pointer;
+
     &:hover {
       font-weight: bold;
     }
@@ -31,6 +33,7 @@
     display: flex;
     flex-direction: column;
     font-size: 14px;
+
     &--field {
       width: 100%;
       position: relative;

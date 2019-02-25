@@ -9,7 +9,7 @@ export abstract class BaseHttpService extends HttpClient {
     return this._getBaseUrl(environment.httpConfig);
   }
 
-  constructor( @Inject(HttpHandler) handler: HttpHandler) {
+  constructor(@Inject(HttpHandler) handler: HttpHandler) {
     super(handler);
   }
 

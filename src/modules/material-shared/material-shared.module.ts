@@ -20,10 +20,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatDialogModule,
     MatButtonModule,
     MatCheckboxModule,
-
     MatInputModule
-  ],
-
+  ]
 })
 export class MaterialSharedModule {
 }

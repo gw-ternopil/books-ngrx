@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
+import {AuthGuardService} from '../communicate/services/auth-guard.service';
 import {BooksListComponent} from './components/books-list/books-list.component';
 import {BookItemComponent} from './components/book-item/book-item.component';
-import {AuthGuardService} from '../communicate/services/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -18,10 +18,6 @@ const routes: Routes = [
     path: 'books-list/:id',
     component: BookItemComponent,
     canActivate: [AuthGuardService]
-  },
-  {
-    path: '**',
-    redirectTo: ''
   }
 ];
 

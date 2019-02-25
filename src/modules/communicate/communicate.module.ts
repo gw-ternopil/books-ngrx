@@ -1,13 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 import {StoreModule} from '@ngrx/store';
 import {BooksReducer} from './redux/reducers/books.reducer';
 import {BooksModule} from '../books/books.module';
-import {HttpClientModule} from '@angular/common/http';
 import {MaterialSharedModule} from '../material-shared/material-shared.module';
 import {BookDialogComponent} from '../books/components/book-dialog/book-dialog.component';
-import {FormsModule} from '@angular/forms';
-
 
 
 @NgModule({
@@ -22,4 +21,5 @@ import {FormsModule} from '@angular/forms';
   ],
   entryComponents: [BookDialogComponent]
 })
-export class CommunicateModule { }
+export class CommunicateModule {
+}

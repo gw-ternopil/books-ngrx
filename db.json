@@ -4,7 +4,7 @@
       "name": "11/22/63",
       "author": "Stephen King",
       "genre": "Detective, fantastic ",
-      "pageAmount": 930,
+      "pageAmount": 935,
       "id": 1
     },
     {
@@ -12,28 +12,40 @@
       "author": "Taras Shevchencko",
       "genre": "Poetry",
       "pageAmount": 1000,
-      "id": 2
+      "id": 2,
+      "isFaforite": false
     },
     {
       "name": "ll world War",
       "author": "Agata Kristi",
       "genre": "Detective",
       "pageAmount": 345,
-      "id": 3
+      "id": 3,
+      "isFaforite": false
     },
     {
       "name": "WAR",
       "author": "Marie Remark",
       "genre": "Detective",
       "pageAmount": 755,
-      "id": 4
+      "id": 4,
+      "isFaforite": false
     },
     {
       "name": "Angular Proffesional",
       "author": "Nick Smith",
       "genre": "Technical lecture",
       "pageAmount": 1100,
-      "id": 5
+      "id": 5,
+      "isFaforite": false
+    },
+    {
+      "name": "TestBook",
+      "author": "Test Author",
+      "genre": "Undefined",
+      "pageAmount": 1212,
+      "id": 6,
+      "isFaforite": true
     }
   ]
 }

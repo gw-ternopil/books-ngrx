@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { BooksRoutingModule } from './books-routing.module';
-import { BookItemComponent } from './components/book-item/book-item.component';
-import { BooksListComponent } from './components/books-list/books-list.component';
-import {MaterialSharedModule} from '../material-shared/material-shared.module';
-import { BookDialogComponent } from './components/book-dialog/book-dialog.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {ReactiveFormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BooksRoutingModule} from './books-routing.module';
+import {MaterialSharedModule} from '../material-shared/material-shared.module';
+import {BookItemComponent} from './components/book-item/book-item.component';
+import {BooksListComponent} from './components/books-list/books-list.component';
+import {BookDialogComponent} from './components/book-dialog/book-dialog.component';
 
 
 @NgModule({
@@ -20,4 +20,5 @@ import {ReactiveFormsModule} from '@angular/forms';
   ],
 
 })
-export class BooksModule { }
+export class BooksModule {
+}

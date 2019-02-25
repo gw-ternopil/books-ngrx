@@ -1,10 +1,10 @@
-import { Injectable} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpHandler} from '@angular/common/http';
-import {BaseHttpService} from './base-http.service';
 import {Store} from '@ngrx/store';
-import {IHttpConfig} from '../models/http-config';
-import {AddBook, LoadBooks, UpdateBook} from '../redux/actions/books.action';
 import {AppState} from '../redux/state/app.state';
+import {AddBook, LoadBooks, UpdateBook} from '../redux/actions/books.action';
+import {BaseHttpService} from './base-http.service';
+import {IHttpConfig} from '../models/http-config';
 import {Book, Books} from '../models/books.model';
 
 @Injectable({

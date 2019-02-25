@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {MatDialog} from '@angular/material';
 import {Store} from '@ngrx/store';
 import {combineLatest, Observable} from 'rxjs';
 import {Book, Books} from '../../../communicate/models/books.model';
 import {AppState} from '../../../communicate/redux/state/app.state';
-import {MatDialog} from '@angular/material';
 import {BookDialogComponent} from '../book-dialog/book-dialog.component';
 
 
